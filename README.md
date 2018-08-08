@@ -13,7 +13,11 @@ This project is broadly divided into three parts: in order to train the neural n
 
 ## The application
 
-The final product of this project is a real-time Python application displaying a webcam feed and the processed output of the night-to-day neural network. A video demo is available at [insert gitHub address here]. It is only able to convert the laboratory’s environment because of the very specific training dataset [@minh-n](https://github.com/minh-n) created. 
+The final product of this project is a real-time Python application displaying a webcam feed and the processed output of the night-to-day neural network. It is only able to convert the laboratory’s environment because of the very specific training dataset [@minh-n](https://github.com/minh-n) created. 
+
+Here is a video demo of the application:
+
+[![A video demo of the application (youtube)](https://img.youtube.com/vi/Sq3VLYMJ3ts/0.jpg)](https://www.youtube.com/watch?v=Sq3VLYMJ3ts)
 
 ## Running the application
 
