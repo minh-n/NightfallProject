@@ -16,6 +16,8 @@ The original files have been placed into  (`dataset/Originals`). The Webcam test
 
 ### Running the scripts
 
+The dataset processing scripts can be run in a Linux shell. PIL and OpenCV will need to be installed.
+
 ```
 python .\crop.py --resize 350 --startpos 0 --divide 2 --inFolder ../path/to/input/large/pictures/.. --outFolder ../path/to/output/cropped/pictures/..
 
@@ -36,7 +38,7 @@ DN3 was captured using another method: the camera was tethered to the computer a
 It produced rather a low-quality result  and some images are nearly black.
 However, no exposure adustments have been made: this could be a problem for machine learning, with the numerous artifacts in the night pictures.
 
-DN4_Dark: as its name implies, IT contains the pictures that received no or insufficient illumination during night. We will see if those are exploitable.
+DN4_Dark: as its name implies, it contains the pictures that received no or insufficient illumination during night. We will see if those are exploitable.
 
 DN5_all is a combination of DN1 and DN2 which are relatively similar datasets. It yields pretty good results when feeded to the neural network. Other dataset of this kind will be made in the near future. After a 1000 epochs training, it gives better results when applied to DN3. 
 
@@ -49,9 +51,9 @@ KG1 is a dataset from another student of CARE Lab, Koga. He graciously offered u
 
 CGN1 is a conbination of DN1, 2, 3 and 4, totalling 312 pairs. Although CycleGAN doesn't need pairs, we don't have anything else at the moment.
 
-Weather/RN1 is a new dataset used in the CycleGAN training ************TODO*************
+Weather/RN1 is a new dataset used in the CycleGAN training. It is composed of more than 30 000 unpaired images, since CycleGAN does not need pairs. It is divided into four categories: Typhoon 1 and 2, Day and Night. Packs of 1000 randomly selected images are also available for lesser training time.
 
-Webcam is very dark
+Webcam is a very dark dataset captured with the Logitech 720 webcam. It is intended to be used as a test dataset; to see how the model reacts with a common webcam and a dark setting.
 
 Further dataset types will come, depending on the needs of the project.
 
