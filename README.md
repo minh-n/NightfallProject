@@ -27,27 +27,30 @@ The conversion application can be runned as is on Linux and needs the following 
 
 ```
 Python 3.6
-CUDA version ?
+CUDA 9.2
 PyTorch 0.4
-PIL and OpenCV 
+Latest versions of PIL and OpenCV through Python's pip-install
 ```
 
 The dataset processing scripts only needs `PIL` & `OpenCV`.
 
-### Shell commands
-
-```
-python test.py --args @Mohzick pls do this
-```
-
-## Machine learning 
+### Machine learning 
 
 The Pix2Pix neural network can be trained using a dataset formatted using the available scripts. The dataset needs to be separated into two folders of paired images (Day and Night or any other transformation). The images' size needs to be 350x350. A good number of pairs would be around 1000 (we could only use the 600 available for the final application).  
+
+We ran the training on a desktop PC equipped with a GeForce GTX 1080. Each epoch could take approximately up to 3 minutes, depending on the size of the dataset and its images. The main training script is train.py and can be run in a Linux shell as is. 
 
 ## Technologies used
 
 With the help of a programmable cleaner robot and an omnidirectional camera, we have captured many pairs of the corresponding night and day-time images from the same viewpoint.  [![A video of the robot in action](https://img.youtube.com/vi/vov4H4KSB8A/0.jpg)](https://www.youtube.com/watch?v=vov4H4KSB8A)
 
+PyTorch is one of the many machine learning libraries available. Developed by Facebook on top of Torch (a Lua library), it is extensively used across the research world and the industry. 
+
+PyTorch has two advantages for our project: 
+-Its syntax is very similar to traditional Python and numpy, making the learning process easier,
+-It makes use of CUDA, the GPU acceleration API developed by Nvidia, making the calculation times lower.
+
+That is why we have chosen to work with PyTorch over other libraries like Tensorflow. Furthermore, the 1.0 version of PyTorch will bring a lot of features, including C++ and mobile exports. Those two features are most interesting for our project: a consumer mobile version is the ultimate goal and C++ would only increase its performances. 
 
 ## Future work
 
