@@ -7,7 +7,7 @@ This project was developped during a 3-months long internship at CARE Lab (Nara 
 
 Nightfall Project originally aims to convert a night video into a day video, using an image generating neural network. Transforming night to day has several applications in automated vehicles (to have a clear image of the night, allowing better visibility), surveillance and even tourism or AR attractions. For example, a future tourist will be able to clear rain from a landscape to take the perfect picture. 
 
-This project tackles the basics of machine learning and computer vision. It is mostly a learning experience and reuses the work of Nvidia who developped the main ideas behind the Pix2Pix and CycleGAN machine learning algorithms. 
+This project tackles the basics of machine learning and computer vision. It is mostly a learning experience and reuses the work of Nvidia who developped the main ideas behind the Pix2Pix and CycleGAN machine learning algorithms. Both papers can be read [here](https://arxiv.org/pdf/1611.07004.pdf) and [here](https://arxiv.org/pdf/1703.10593.pdf). 
 
 This project is broadly divided into three parts: in order to train the neural network, I created a dataset composed of various kind of images. Some of them are pairs of day and night images captured by a 360 camera. Some others, like the rain dataset, have been captured by a smartphone and are all unpaired images. The seccond part involves understanding and implementing the Pix2pix and CycleGAN algorithms and creating a model using the dataset. Finally, a real-time application using a PC webcam can be created.
 
